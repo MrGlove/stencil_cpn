@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+    <title>Stencil Component Starter</title>
+
+    <script type="module" src="/build/gls-cpn.esm.js"></script>
+    <script nomodule src="/build/gls-cpn.js"></script>
+</head>
+
+<body>
+    <script>
+    </script>
+    <style>
+        .button-list dd {
+            display: inline-block;
+            margin-inline-start: 20px;
+        }
+        
+        .link-list dd {
+            display: inline-block;
+            margin-inline-start: 10px;
+        }
+        
+        .radio-group dd {
+            display: inline-block;
+            margin-inline-start: 10px;
+        }
+    </style>
+    <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
+    <test-cpnfirst ttext="-----------------------------------"></test-cpnfirst>
+    <dl class="button-list">
+        <dd>
+            <gls-button button-radius="13px" button-type="primary" button-text="AAAA"></gls-button>
+        </dd>
+        <dd>
+            <gls-button button-radius="13px" button-type="default" button-text="BBBB"></gls-button>
+        </dd>
+        <dd>
+            <gls-button button-radius="13px" button-type="text" button-text="CCCC"></gls-button>
+        </dd>
+    </dl>
+    <dl class="link-list">
+        <dd>
+            <gls-link link-type="default" link-text="DEFAULT"></gls-link>
+        </dd>
+        <dd>
+            <gls-link link-type="primary" link-text="PRIMARY"></gls-link>
+        </dd>
+        <dd>
+            <gls-link link-type="success" link-text="SUCCESS"></gls-link>
+        </dd>
+        <dd>
+            <gls-link link-type="warning" link-text="WARNING"></gls-link>
+        </dd>
+        <dd>
+            <gls-link link-type="danger" link-text="DANGER"></gls-link>
+        </dd>
+    </dl>
+    <dl class="radio-group">
+        <dd>
+            <gls-radio radio-style="round" radio-name="ice-or-not" radio-color="primary" item-text="去冰" item-id="no-ice" item-checked="true"></gls-radio>
+        </dd>
+        <dd>
+            <gls-radio radio-style="round" radio-name="ice-or-not" radio-color="primary" item-text="加冰" item-id="normal-ice"></gls-radio>
+        </dd>
+        <dd>
+            <gls-radio radio-style="round" radio-name="ice-or-not" radio-color="primary" item-text="多冰" item-id="fill-ice"></gls-radio>
+        </dd>
+    </dl>
+    <dl class="radio-group">
+        <dd>
+            <gls-radio radio-style="square" radio-name="cloth-size" radio-color="orange" item-text="S" item-id="small-size"></gls-radio>
+        </dd>
+        <dd>
+            <gls-radio radio-style="square" radio-name="cloth-size" radio-color="orange" item-text="M" item-id="middle-size"></gls-radio>
+        </dd>
+        <dd>
+            <gls-radio radio-style="square" radio-name="cloth-size" radio-color="orange" item-text="L" item-id="large-size" item-checked="true"></gls-radio>
+        </dd>
+        <dd>
+            <gls-radio radio-style="square" radio-name="cloth-size" radio-color="orange" item-text="XL" item-id="xlarge-size"></gls-radio>
+        </dd>
+        <dd>
+            <gls-radio radio-style="square" radio-name="cloth-size" radio-color="orange" item-text="XXL" item-id="xxlarge-size"></gls-radio>
+        </dd>
+    </dl>
+</body>
+
+</html>

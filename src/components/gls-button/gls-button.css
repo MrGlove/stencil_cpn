@@ -1,0 +1,11 @@
+:host {
+    display: block;
+}
+
+div {
+    font-size: 24px;
+}
+
+.button {
+    border-radius: 3px;
+}

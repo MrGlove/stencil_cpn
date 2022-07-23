@@ -1,0 +1,48 @@
+:host {
+    display: block;
+}
+
+input[type="radio"]+label::before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    box-sizing: border-box;
+    margin-bottom: 2px;
+    border: 1px solid #bfcbd9;
+}
+
+.radio-square::before {
+    border-radius: 20%;
+}
+
+.radio-round::before {
+    border-radius: 50%;
+}
+
+
+/* 被选中的单选框样式  给空心圆圈中间加上背景色*/
+
+input[type="radio"]:checked+.radio-color-primary::before {
+    background-color: #178fe6;
+    background-clip: content-box;
+    /* 规定背景颜色的绘制区域 */
+    padding: 2px;
+}
+
+input[type="radio"]:checked+.radio-color-orange::before {
+    background-color: #f91;
+    background-clip: content-box;
+    /* 规定背景颜色的绘制区域 */
+    padding: 2px;
+}
+
+
+/* 单选框文字的样式 */
+
+input[type="radio"]+label {
+    font-size: 13px;
+    margin-right: 5px;
+}
