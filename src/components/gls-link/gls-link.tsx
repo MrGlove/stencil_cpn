@@ -22,7 +22,7 @@ export class GlsLink {
       linkTypeMap[this.linkType] :
       linkTypeMap['dafault']
     return (
-      <a href="#" class={`gls-link gls-link-${linkTypeCSS}`}>{this.linkText}</a>
+      <a href="#" class={`gls-link gls-link-${linkTypeCSS}`} >{this.linkText}</a>
     );
   }
 

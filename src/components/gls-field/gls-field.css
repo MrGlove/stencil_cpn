@@ -1,0 +1,58 @@
+:host {
+  display: block;
+}
+.field{
+    margin: 10px 15px ;
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    /* width: 100%; */
+    padding: 10px 16px;
+    overflow: hidden;
+    color: #333;
+    font-size: 14px;
+    line-height: 24px;
+    background: #fff;
+    border-radius: 5px;
+}
+.field-left{
+    flex: none;
+    box-sizing: border-box;
+    width: 80px;
+    margin-right: 12px;
+    color: #666;
+    text-align: left;
+}
+.field-left-req::before{
+  content: '*';
+  color: red;
+}
+.field-right{
+    flex: 1;
+}
+.field-input{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.field-input-text{
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: inherit;
+    text-align: left;
+    background-color: transparent;
+    border: 0;
+    resize: none;
+    user-select: auto;
+    outline: none;
+}
+.field-input-icon{
+    margin-right: -8px;
+    padding: 0 8px;
+    line-height: inherit;
+}

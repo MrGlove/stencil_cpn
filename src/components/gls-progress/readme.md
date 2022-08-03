@@ -1,0 +1,18 @@
+# gls-progress
+
+
+
+<!-- Auto Generated Below -->
+
+
+## Properties
+
+| Property          | Attribute          | Description | Type     | Default     |
+| ----------------- | ------------------ | ----------- | -------- | ----------- |
+| `progressColor`   | `progress-color`   |             | `string` | `'#409eff'` |
+| `progressPercent` | `progress-percent` |             | `number` | `50`        |
+
+
+----------------------------------------------
+
+*Built with [StencilJS](https://stenciljs.com/)*

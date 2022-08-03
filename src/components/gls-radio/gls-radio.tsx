@@ -12,7 +12,7 @@ function offerId() {
 })
 export class GlsRadio {
   @Prop() radioStyle: string = 'round'
-  @Prop() radioColor: string = 'primary'
+  @Prop() radioColor: string = 'blue'
   @Prop() radioName: string = 'defaultName'
   @Prop() itemText: string = 'content'
   @Prop() itemId: string = 'defaultID' + offerId()()

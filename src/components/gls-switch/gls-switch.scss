@@ -1,0 +1,75 @@
+
+@use "sass:math";
+:host {
+  display: block;
+  --switch-size:30px;
+  $switch-size:var(--switch-size) !global;
+}
+
+// .gls-switch
+// {}
+    
+.switch{   
+    display: none;  
+    
+}   
+label{
+    
+    position:relative;
+    display: block;
+    padding: 1px;
+    border-radius: $switch-size ;
+    height: $switch-size;
+    width: calc($switch-size*2);
+    margin-bottom: 5px;
+    background-color: #eee;
+    cursor: pointer;
+    user-select: none;
+    -webkit-border-radius: $switch-size ;
+    -moz-border-radius: $switch-size ;
+    -ms-border-radius: $switch-size ;
+    -o-border-radius: $switch-size ;
+}   
+label:before{
+    content: '';
+    display: block;
+    border-radius: $switch-size;
+    height: $switch-size;
+    border:1px solid rgba(0, 0, 0, 0.1);
+    background-color: white;
+    transform: scale(1, 1);
+    transition: all 0.3s ease;
+    -webkit-border-radius: $switch-size;
+    -moz-border-radius: $switch-size;
+    -ms-border-radius: $switch-size;
+    -o-border-radius: $switch-size;
+}   
+label:after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: calc(1px - (calc($switch-size/2)));
+    margin-left: calc(0px - (calc($switch-size/2)));
+    width: $switch-size;
+    height: $switch-size;
+    border-radius: $switch-size;
+    background-color: white;
+    box-shadow: 0 3px 1px 0 rgba(0, 0, 0, .05), 0 2px 2px 0 rgba(0, 0, 0, .1), 0 3px 3px 0 rgba(0, 0, 0, .05);
+    transform: translate(calc(1px - (calc($switch-size/2))));
+    transition: all 0.3s ease;
+    -webkit-transform: translate(calc(1px - (calc($switch-size/2))));
+    -moz-transform: translate(calc(1px - (calc($switch-size/2))));
+    -ms-transform: translate(calc(1px - (calc($switch-size/2))));
+    -o-transform: translate(calc(1px - (calc($switch-size/2))));
+}   
+.switch:checked~label:after{
+    transform: translate(calc((calc($switch-size/2)) - 1px));
+    -webkit-transform: translate(calc((calc($switch-size/2)) - 1px));
+    -moz-transform: translate(calc((calc($switch-size/2)) - 1px));
+    -ms-transform: translate(calc((calc($switch-size/2)) - 1px));
+    -o-transform: translate(calc((calc($switch-size/2)) - 1px));
+}   
+.switch:checked~label:before{   
+    background-color:green;   
+} 

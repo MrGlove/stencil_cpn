@@ -6,14 +6,65 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface GlsAvatar {
+        "avatarShape": string;
+        "avatarSize": string;
+        "avatarType": string;
+    }
+    interface GlsBacktop {
+    }
+    interface GlsBadge {
+        "badgeColor": string;
+        "badgeContent": string;
+        "badgeHostText": string;
+        "badgeStyle": string;
+    }
     interface GlsButton {
         "buttonRadius": string;
         "buttonText": string;
         "buttonType": string;
     }
+    interface GlsCheckbox {
+        "checkboxColor": string;
+        "checkboxName": string;
+        "checkboxStyle": string;
+        "itemChecked": boolean;
+        "itemId": string;
+        "itemText": string;
+    }
+    interface GlsCollapse {
+    }
+    interface GlsDialog {
+        "showDialog": () => Promise<void>;
+    }
+    interface GlsField {
+        "inputIcon": string;
+        "inputText": string;
+        "labelText": string;
+        "required": boolean;
+    }
+    interface GlsIcon {
+        "iconColor": string;
+        "iconSize": string;
+        "iconStyle": string;
+    }
     interface GlsLink {
         "linkText": string;
         "linkType": string;
+    }
+    interface GlsLoading {
+    }
+    interface GlsMenu {
+    }
+    interface GlsNotification {
+        "showNotify": () => Promise<void>;
+    }
+    interface GlsPagination {
+        "paginationStyle": string;
+    }
+    interface GlsProgress {
+        "progressColor": string;
+        "progressPercent": number;
     }
     interface GlsRadio {
         "itemChecked": boolean;
@@ -23,30 +74,82 @@ export namespace Components {
         "radioName": string;
         "radioStyle": string;
     }
+    interface GlsSelect {
+    }
+    interface GlsSwitch {
+        "switchChecked": boolean;
+        "switchColor": string;
+        "switchDisabled": boolean;
+        "switchSize": string;
+    }
+    interface GlsTag {
+        "tagContent": string;
+        "tagStyle": string;
+    }
     interface MyComponent {
-        /**
-          * The first name
-         */
         "first": string;
-        /**
-          * The last name
-         */
         "last": string;
-        /**
-          * The middle name
-         */
         "middle": string;
     }
     interface TestCpnfirst {
+        "tcolor": string;
         "ttext": string;
     }
 }
 declare global {
+    interface HTMLGlsAvatarElement extends Components.GlsAvatar, HTMLStencilElement {
+    }
+    var HTMLGlsAvatarElement: {
+        prototype: HTMLGlsAvatarElement;
+        new (): HTMLGlsAvatarElement;
+    };
+    interface HTMLGlsBacktopElement extends Components.GlsBacktop, HTMLStencilElement {
+    }
+    var HTMLGlsBacktopElement: {
+        prototype: HTMLGlsBacktopElement;
+        new (): HTMLGlsBacktopElement;
+    };
+    interface HTMLGlsBadgeElement extends Components.GlsBadge, HTMLStencilElement {
+    }
+    var HTMLGlsBadgeElement: {
+        prototype: HTMLGlsBadgeElement;
+        new (): HTMLGlsBadgeElement;
+    };
     interface HTMLGlsButtonElement extends Components.GlsButton, HTMLStencilElement {
     }
     var HTMLGlsButtonElement: {
         prototype: HTMLGlsButtonElement;
         new (): HTMLGlsButtonElement;
+    };
+    interface HTMLGlsCheckboxElement extends Components.GlsCheckbox, HTMLStencilElement {
+    }
+    var HTMLGlsCheckboxElement: {
+        prototype: HTMLGlsCheckboxElement;
+        new (): HTMLGlsCheckboxElement;
+    };
+    interface HTMLGlsCollapseElement extends Components.GlsCollapse, HTMLStencilElement {
+    }
+    var HTMLGlsCollapseElement: {
+        prototype: HTMLGlsCollapseElement;
+        new (): HTMLGlsCollapseElement;
+    };
+    interface HTMLGlsDialogElement extends Components.GlsDialog, HTMLStencilElement {
+    }
+    var HTMLGlsDialogElement: {
+        prototype: HTMLGlsDialogElement;
+        new (): HTMLGlsDialogElement;
+    };
+    interface HTMLGlsFieldElement extends Components.GlsField, HTMLStencilElement {
+    }
+    var HTMLGlsFieldElement: {
+        prototype: HTMLGlsFieldElement;
+        new (): HTMLGlsFieldElement;
+    };
+    interface HTMLGlsIconElement extends Components.GlsIcon, HTMLStencilElement {
+    }
+    var HTMLGlsIconElement: {
+        prototype: HTMLGlsIconElement;
+        new (): HTMLGlsIconElement;
     };
     interface HTMLGlsLinkElement extends Components.GlsLink, HTMLStencilElement {
     }
@@ -54,11 +157,59 @@ declare global {
         prototype: HTMLGlsLinkElement;
         new (): HTMLGlsLinkElement;
     };
+    interface HTMLGlsLoadingElement extends Components.GlsLoading, HTMLStencilElement {
+    }
+    var HTMLGlsLoadingElement: {
+        prototype: HTMLGlsLoadingElement;
+        new (): HTMLGlsLoadingElement;
+    };
+    interface HTMLGlsMenuElement extends Components.GlsMenu, HTMLStencilElement {
+    }
+    var HTMLGlsMenuElement: {
+        prototype: HTMLGlsMenuElement;
+        new (): HTMLGlsMenuElement;
+    };
+    interface HTMLGlsNotificationElement extends Components.GlsNotification, HTMLStencilElement {
+    }
+    var HTMLGlsNotificationElement: {
+        prototype: HTMLGlsNotificationElement;
+        new (): HTMLGlsNotificationElement;
+    };
+    interface HTMLGlsPaginationElement extends Components.GlsPagination, HTMLStencilElement {
+    }
+    var HTMLGlsPaginationElement: {
+        prototype: HTMLGlsPaginationElement;
+        new (): HTMLGlsPaginationElement;
+    };
+    interface HTMLGlsProgressElement extends Components.GlsProgress, HTMLStencilElement {
+    }
+    var HTMLGlsProgressElement: {
+        prototype: HTMLGlsProgressElement;
+        new (): HTMLGlsProgressElement;
+    };
     interface HTMLGlsRadioElement extends Components.GlsRadio, HTMLStencilElement {
     }
     var HTMLGlsRadioElement: {
         prototype: HTMLGlsRadioElement;
         new (): HTMLGlsRadioElement;
+    };
+    interface HTMLGlsSelectElement extends Components.GlsSelect, HTMLStencilElement {
+    }
+    var HTMLGlsSelectElement: {
+        prototype: HTMLGlsSelectElement;
+        new (): HTMLGlsSelectElement;
+    };
+    interface HTMLGlsSwitchElement extends Components.GlsSwitch, HTMLStencilElement {
+    }
+    var HTMLGlsSwitchElement: {
+        prototype: HTMLGlsSwitchElement;
+        new (): HTMLGlsSwitchElement;
+    };
+    interface HTMLGlsTagElement extends Components.GlsTag, HTMLStencilElement {
+    }
+    var HTMLGlsTagElement: {
+        prototype: HTMLGlsTagElement;
+        new (): HTMLGlsTagElement;
     };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
@@ -73,22 +224,87 @@ declare global {
         new (): HTMLTestCpnfirstElement;
     };
     interface HTMLElementTagNameMap {
+        "gls-avatar": HTMLGlsAvatarElement;
+        "gls-backtop": HTMLGlsBacktopElement;
+        "gls-badge": HTMLGlsBadgeElement;
         "gls-button": HTMLGlsButtonElement;
+        "gls-checkbox": HTMLGlsCheckboxElement;
+        "gls-collapse": HTMLGlsCollapseElement;
+        "gls-dialog": HTMLGlsDialogElement;
+        "gls-field": HTMLGlsFieldElement;
+        "gls-icon": HTMLGlsIconElement;
         "gls-link": HTMLGlsLinkElement;
+        "gls-loading": HTMLGlsLoadingElement;
+        "gls-menu": HTMLGlsMenuElement;
+        "gls-notification": HTMLGlsNotificationElement;
+        "gls-pagination": HTMLGlsPaginationElement;
+        "gls-progress": HTMLGlsProgressElement;
         "gls-radio": HTMLGlsRadioElement;
+        "gls-select": HTMLGlsSelectElement;
+        "gls-switch": HTMLGlsSwitchElement;
+        "gls-tag": HTMLGlsTagElement;
         "my-component": HTMLMyComponentElement;
         "test-cpnfirst": HTMLTestCpnfirstElement;
     }
 }
 declare namespace LocalJSX {
+    interface GlsAvatar {
+        "avatarShape"?: string;
+        "avatarSize"?: string;
+        "avatarType"?: string;
+    }
+    interface GlsBacktop {
+    }
+    interface GlsBadge {
+        "badgeColor"?: string;
+        "badgeContent"?: string;
+        "badgeHostText"?: string;
+        "badgeStyle"?: string;
+    }
     interface GlsButton {
         "buttonRadius"?: string;
         "buttonText"?: string;
         "buttonType"?: string;
     }
+    interface GlsCheckbox {
+        "checkboxColor"?: string;
+        "checkboxName"?: string;
+        "checkboxStyle"?: string;
+        "itemChecked"?: boolean;
+        "itemId"?: string;
+        "itemText"?: string;
+    }
+    interface GlsCollapse {
+    }
+    interface GlsDialog {
+    }
+    interface GlsField {
+        "inputIcon"?: string;
+        "inputText"?: string;
+        "labelText"?: string;
+        "required"?: boolean;
+    }
+    interface GlsIcon {
+        "iconColor"?: string;
+        "iconSize"?: string;
+        "iconStyle"?: string;
+    }
     interface GlsLink {
         "linkText"?: string;
         "linkType"?: string;
+    }
+    interface GlsLoading {
+    }
+    interface GlsMenu {
+    }
+    interface GlsNotification {
+    }
+    interface GlsPagination {
+        "paginationStyle"?: string;
+    }
+    interface GlsProgress {
+        "progressColor"?: string;
+        "progressPercent"?: number;
     }
     interface GlsRadio {
         "itemChecked"?: boolean;
@@ -98,27 +314,47 @@ declare namespace LocalJSX {
         "radioName"?: string;
         "radioStyle"?: string;
     }
+    interface GlsSelect {
+    }
+    interface GlsSwitch {
+        "switchChecked"?: boolean;
+        "switchColor"?: string;
+        "switchDisabled"?: boolean;
+        "switchSize"?: string;
+    }
+    interface GlsTag {
+        "tagContent"?: string;
+        "tagStyle"?: string;
+    }
     interface MyComponent {
-        /**
-          * The first name
-         */
         "first"?: string;
-        /**
-          * The last name
-         */
         "last"?: string;
-        /**
-          * The middle name
-         */
         "middle"?: string;
     }
     interface TestCpnfirst {
+        "tcolor"?: string;
         "ttext"?: string;
     }
     interface IntrinsicElements {
+        "gls-avatar": GlsAvatar;
+        "gls-backtop": GlsBacktop;
+        "gls-badge": GlsBadge;
         "gls-button": GlsButton;
+        "gls-checkbox": GlsCheckbox;
+        "gls-collapse": GlsCollapse;
+        "gls-dialog": GlsDialog;
+        "gls-field": GlsField;
+        "gls-icon": GlsIcon;
         "gls-link": GlsLink;
+        "gls-loading": GlsLoading;
+        "gls-menu": GlsMenu;
+        "gls-notification": GlsNotification;
+        "gls-pagination": GlsPagination;
+        "gls-progress": GlsProgress;
         "gls-radio": GlsRadio;
+        "gls-select": GlsSelect;
+        "gls-switch": GlsSwitch;
+        "gls-tag": GlsTag;
         "my-component": MyComponent;
         "test-cpnfirst": TestCpnfirst;
     }
@@ -127,9 +363,25 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "gls-avatar": LocalJSX.GlsAvatar & JSXBase.HTMLAttributes<HTMLGlsAvatarElement>;
+            "gls-backtop": LocalJSX.GlsBacktop & JSXBase.HTMLAttributes<HTMLGlsBacktopElement>;
+            "gls-badge": LocalJSX.GlsBadge & JSXBase.HTMLAttributes<HTMLGlsBadgeElement>;
             "gls-button": LocalJSX.GlsButton & JSXBase.HTMLAttributes<HTMLGlsButtonElement>;
+            "gls-checkbox": LocalJSX.GlsCheckbox & JSXBase.HTMLAttributes<HTMLGlsCheckboxElement>;
+            "gls-collapse": LocalJSX.GlsCollapse & JSXBase.HTMLAttributes<HTMLGlsCollapseElement>;
+            "gls-dialog": LocalJSX.GlsDialog & JSXBase.HTMLAttributes<HTMLGlsDialogElement>;
+            "gls-field": LocalJSX.GlsField & JSXBase.HTMLAttributes<HTMLGlsFieldElement>;
+            "gls-icon": LocalJSX.GlsIcon & JSXBase.HTMLAttributes<HTMLGlsIconElement>;
             "gls-link": LocalJSX.GlsLink & JSXBase.HTMLAttributes<HTMLGlsLinkElement>;
+            "gls-loading": LocalJSX.GlsLoading & JSXBase.HTMLAttributes<HTMLGlsLoadingElement>;
+            "gls-menu": LocalJSX.GlsMenu & JSXBase.HTMLAttributes<HTMLGlsMenuElement>;
+            "gls-notification": LocalJSX.GlsNotification & JSXBase.HTMLAttributes<HTMLGlsNotificationElement>;
+            "gls-pagination": LocalJSX.GlsPagination & JSXBase.HTMLAttributes<HTMLGlsPaginationElement>;
+            "gls-progress": LocalJSX.GlsProgress & JSXBase.HTMLAttributes<HTMLGlsProgressElement>;
             "gls-radio": LocalJSX.GlsRadio & JSXBase.HTMLAttributes<HTMLGlsRadioElement>;
+            "gls-select": LocalJSX.GlsSelect & JSXBase.HTMLAttributes<HTMLGlsSelectElement>;
+            "gls-switch": LocalJSX.GlsSwitch & JSXBase.HTMLAttributes<HTMLGlsSwitchElement>;
+            "gls-tag": LocalJSX.GlsTag & JSXBase.HTMLAttributes<HTMLGlsTagElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "test-cpnfirst": LocalJSX.TestCpnfirst & JSXBase.HTMLAttributes<HTMLTestCpnfirstElement>;
         }

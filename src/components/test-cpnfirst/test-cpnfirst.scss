@@ -1,0 +1,12 @@
+:host {
+    display: block;
+    --fs:16px;
+    $da:var(--fs) !global
+}
+div {
+    font-size: $da;
+}
+#tid{
+    // font-size: var(--fs);
+    color:#511
+}

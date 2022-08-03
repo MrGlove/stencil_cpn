@@ -1,0 +1,30 @@
+:host {
+  display: block;
+}
+.badge-container {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+}
+
+.gls-badge {
+  background-color: #f56c6c;
+  border-radius: 10px;
+  color: #fff;
+  display: inline-block;
+  font-size: 12px;
+  height: 18px;
+  line-height: 18px;
+  padding: 0 6px;
+  text-align: center;
+  white-space: nowrap;
+  border: 1px solid #fff;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  transform: translateY(-38%) translateX(90%);
+  -webkit-transform: translateY(-38%) translateX(90%);
+  -moz-transform: translateY(-38%) translateX(90%);
+  -ms-transform: translateY(-38%) translateX(90%);
+  -o-transform: translateY(-38%) translateX(90%);
+}

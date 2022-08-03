@@ -1,0 +1,76 @@
+:host {
+  display: block;
+}
+.pages {
+  white-space: nowrap;
+  padding: 2px 5px;
+  color: #303133;
+  font-weight: 700;
+}
+.pages button:disabled {
+  color: #c0c4cc;
+  background-color: #fff;
+  cursor: not-allowed;
+}
+
+.btn-prev-simple,
+.btn-next-simple {
+  display: none;
+}
+.btn-prev-arrow,
+.btn-next-arrow {
+  border: none;
+  background: transparent;
+  width: 28px;
+  height: 28px;
+}
+.btn-prev-text,
+.btn-next-text {
+  border: none;
+  background-color: #5fce79;
+  color: #fff;
+  width: 60px;
+  height: 28px;
+  font-size: 14px;
+  text-align: 'center';
+  padding: '4px 10px';
+  display: 'inline-block';
+}
+
+.pagenumbers {
+  user-select: none;
+  list-style: none;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 0;
+  padding: 0;
+  margin: 0;
+}
+.pagenumbers li {
+  padding: 0 4px;
+  background: #fff;
+  vertical-align: top;
+  display: inline-block;
+  font-size: 13px;
+  min-width: 35.5px;
+  height: 28px;
+  line-height: 28px;
+  cursor: pointer;
+  box-sizing: border-box;
+  text-align: center;
+  margin: 0;
+}
+.pagenumbers li.active-arrow {
+  color: #409eff;
+  cursor: default;
+  background-color: rgba(186, 236, 252, 0.479);
+}
+.pagenumbers li.active-simple {
+  color: #409eff;
+  cursor: default;
+}
+.pagenumbers li.active-text {
+  color: #439600;
+  cursor: default;
+  background-color: rgba(221, 252, 186, 0.479);
+}

@@ -13,7 +13,7 @@ const buttonTypeMap = {
 
 export class GlsButton {
 
-  @Prop() buttonText: string = "默认文字";
+  @Prop() buttonText: string = '默认文字';
   @Prop() buttonType: string = 'default';
   @Prop() buttonRadius: string = '3px';
 
@@ -32,8 +32,8 @@ export class GlsButton {
       textAlign: 'center',
       padding: '4px 10px',
       display: 'inline-block',
-      height: '28px'
-    }}>{this.buttonText}</button></div >);
+      height: '32px'
+    }}>{this.buttonText}</button></div>);
   }
 
 }

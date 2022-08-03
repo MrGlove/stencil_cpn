@@ -1,0 +1,13 @@
+:host {
+  display: inline-block;
+  font-size: 22px;
+  color: #444;
+}
+
+
+.gls-icon{
+  font-family: 'iconfont' !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

@@ -7,30 +7,106 @@
     <title>Stencil Component Starter</title>
 
     <script type="module" src="/build/gls-cpn.esm.js"></script>
-    <script nomodule src="/build/gls-cpn.js"></script>
+    <!-- <script nomodule src="/build/gls-cpn.js"></script> -->
+    <link rel="stylesheet" href="/build/gls-cpn.css" />
 </head>
 
 <body>
     <script>
+        function handleNotifyShow() {
+            customElements.whenDefined('gls-notification');
+            const notifyElement = document.querySelector('gls-notification');
+            console.log(notifyElement);
+            notifyElement.showNotify();
+        }
+        function handleDialogShow() {
+            customElements.whenDefined('gls-dialog');
+            const notifyElement = document.querySelector('gls-dialog');
+            console.log(notifyElement);
+            notifyElement.showDialog();
+        }
+        
     </script>
-    <style>
+    <style lang='scss'>
         .button-list dd {
             display: inline-block;
             margin-inline-start: 20px;
         }
-        
+
         .link-list dd {
             display: inline-block;
             margin-inline-start: 10px;
         }
-        
+
         .radio-group dd {
             display: inline-block;
             margin-inline-start: 10px;
         }
+
+        .radio-group-hori dd {
+            display: block;
+            margin-top: 1px;
+        }
+
+        .checkbox-group dd {
+            display: inline-block;
+            margin-inline-start: 10px;
+        }
+
+        .icon-group dd {
+            display: inline-block;
+            margin-inline-start: 20px;
+        }
+
+        .field-group dd {
+            display: block;
+            margin-inline-start: 0px;
+            padding: 1px 0;
+            background-color: #f7f8fa;
+        }
+
+        .switch-group dd {
+            display: inline-block;
+            margin-inline-start: 20px;
+        }
+
+        .avatar-group dd {
+            display: inline-block;
+            margin-inline-start: 20px;
+        }
+
+        .tag-group dd {
+            display: inline-block;
+            margin-inline-start: 20px;
+        }
+
+        .badge-group dd {
+            display: inline-block;
+            margin-inline-start: 20px;
+        }
+
+        .pagination-group dd {
+            margin-inline-start: 0;
+            text-align: center;
+            display: block;
+            margin-top: 30px;
+        }
+
+        .loading-group dd {
+            margin-inline-start: 0;
+            text-align: center;
+            display: block;
+            margin-top: 30px;
+        }
+        .menu-group dd{
+            margin-inline-start: 0;
+        }
+        .collapse-group dd{
+            margin-inline-start: 0;
+        }
     </style>
     <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
-    <test-cpnfirst ttext="-----------------------------------"></test-cpnfirst>
+    <test-cpnfirst ttext="------------------" tcolor="#f91"></test-cpnfirst>
     <dl class="button-list">
         <dd>
             <gls-button button-radius="13px" button-type="primary" button-text="AAAA"></gls-button>
@@ -61,30 +137,177 @@
     </dl>
     <dl class="radio-group">
         <dd>
-            <gls-radio radio-style="round" radio-name="ice-or-not" radio-color="primary" item-text="去冰" item-id="no-ice" item-checked="true"></gls-radio>
+            <gls-radio radio-style="round" radio-name="ice-or-not" radio-color="blue" item-text="去冰" item-id="no-ice"
+                item-checked="true"></gls-radio>
         </dd>
         <dd>
-            <gls-radio radio-style="round" radio-name="ice-or-not" radio-color="primary" item-text="加冰" item-id="normal-ice"></gls-radio>
+            <gls-radio radio-style="round" radio-name="ice-or-not" radio-color="blue" item-text="加冰"
+                item-id="normal-ice"></gls-radio>
         </dd>
         <dd>
-            <gls-radio radio-style="round" radio-name="ice-or-not" radio-color="primary" item-text="多冰" item-id="fill-ice"></gls-radio>
+            <gls-radio radio-style="round" radio-name="ice-or-not" radio-color="blue" item-text="多冰" item-id="fill-ice">
+            </gls-radio>
         </dd>
     </dl>
-    <dl class="radio-group">
+    <dl class="radio-group-hori">
         <dd>
-            <gls-radio radio-style="square" radio-name="cloth-size" radio-color="orange" item-text="S" item-id="small-size"></gls-radio>
+            <gls-radio radio-style="square" radio-name="cloth-size" radio-color="orange" item-text="S"
+                item-id="small-size"></gls-radio>
         </dd>
         <dd>
-            <gls-radio radio-style="square" radio-name="cloth-size" radio-color="orange" item-text="M" item-id="middle-size"></gls-radio>
+            <gls-radio radio-style="square" radio-name="cloth-size" radio-color="orange" item-text="M"
+                item-id="middle-size"></gls-radio>
         </dd>
         <dd>
-            <gls-radio radio-style="square" radio-name="cloth-size" radio-color="orange" item-text="L" item-id="large-size" item-checked="true"></gls-radio>
+            <gls-radio radio-style="square" radio-name="cloth-size" radio-color="orange" item-text="L"
+                item-id="large-size" item-checked="true"></gls-radio>
         </dd>
         <dd>
-            <gls-radio radio-style="square" radio-name="cloth-size" radio-color="orange" item-text="XL" item-id="xlarge-size"></gls-radio>
+            <gls-radio radio-style="square" radio-name="cloth-size" radio-color="orange" item-text="XL"
+                item-id="xlarge-size"></gls-radio>
         </dd>
         <dd>
-            <gls-radio radio-style="square" radio-name="cloth-size" radio-color="orange" item-text="XXL" item-id="xxlarge-size"></gls-radio>
+            <gls-radio radio-style="square" radio-name="cloth-size" radio-color="orange" item-text="XXL"
+                item-id="xxlarge-size"></gls-radio>
+        </dd>
+    </dl>
+    <dl class="checkbox-group">
+        <dd>
+            <gls-checkbox checkbox-style="square" checkbox-name="needABC" checkbox-color="blue" item-text="needA"
+                item-id="need-a" item-checked="true"></gls-checkbox>
+        </dd>
+        <dd>
+            <gls-checkbox checkbox-style="square" checkbox-name="needABC" checkbox-color="blue" item-text="needB"
+                item-id="need-b" item-checked="true"></gls-checkbox>
+        </dd>
+        <dd>
+            <gls-checkbox checkbox-style="square checkbox-name=" needABC" checkbox-color="blue" item-text="needC"
+                item-id="need-c" item-checked="true">
+            </gls-checkbox>
+        </dd>
+    </dl>
+    <dl class="icon-group">
+        <dd>
+            <gls-icon icon-size='15px' icon-color='#f91' icon-style='&#xe61e;'></gls-icon>
+        </dd>
+        <dd>
+            <gls-icon icon-size='25px' icon-color='#FD0400' icon-style='&#xe612;'></gls-icon>
+        </dd>
+        <dd>
+            <gls-icon icon-size='40px' icon-color='#C4D08A' icon-style='&#xe61c;'></gls-icon>
+        </dd>
+        <dd>
+            <gls-icon icon-size='25px' icon-color='#2978FF' icon-style='&#xe61a;'></gls-icon>
+        </dd>
+        <dd>
+            <gls-icon icon-color='#444' icon-style='&#xe61d;'></gls-icon>
+        </dd>
+    </dl>
+    <dl class="field-group">
+        <dd>
+            <gls-field label-text='文本' input-text='请输入'></gls-field>
+        </dd>
+        <dd>
+            <gls-field label-text='您的ID' input-text='请在此输入' input-icon='&#xe61b;' required='true'></gls-field>
+        </dd>
+    </dl>
+    <dl class="switch-group">
+        <dd>
+            <gls-switch switch-size='20px' switch-color='#4FC18D'></gls-switch>
+        </dd>
+        <dd>
+            <gls-switch switch-size='26px' switch-color='#f91' switch-disabled='true'></gls-switch>
+        </dd>
+        <dd>
+            <gls-switch switch-size='38px' switch-color='#1A89FA' switch-checked='true'></gls-switch>
+        </dd>
+        <dd>
+            <gls-switch switch-size='30px' switch-color='#12CE66' switch-disabled='true' switch-checked='true'>
+            </gls-switch>
+        </dd>
+    </dl>
+    <dl class="badge-group">
+        <dd>
+            <gls-badge badge-host-text='基础样式' badge-color='#f56c6c' badge-content='24'></gls-badge>
+        </dd>
+        <dd>
+            <gls-badge badge-host-text='蓝色样式' badge-color='#409EFF' badge-content='66'></gls-badge>
+        </dd>
+        <dd>
+            <gls-badge badge-host-text='省略' badge-color='#f56c6c' badge-content='244'></gls-badge>
+        </dd>
+    </dl>
+    <dl class="avatar-group">
+        <dd>
+            <gls-avatar avatar-shape='square' avatar-type='icon'></gls-avatar>
+        </dd>
+        <dd>
+            <gls-avatar avatar-shape='round' avatar-type='img'></gls-avatar>
+        </dd>
+        <dd>
+            <gls-avatar avatar-shape='round' avatar-type='letter'></gls-avatar>
+        </dd>
+    </dl>
+    <dl class="tag-group">
+        <dd>
+            <gls-tag tag-style='success' tag-content='PASSED'></gls-tag>
+        </dd>
+        <dd>
+            <gls-tag tag-style='primary' tag-content='IN PROGRESS'></gls-tag>
+        </dd>
+        <dd>
+            <gls-tag tag-style='info' tag-content='INFO'></gls-tag>
+        </dd>
+    </dl>
+    <dl class="pagination-group">
+        <dd>
+            <gls-pagination pagination-style='simple'></gls-pagination>
+        </dd>
+        <dd>
+            <gls-pagination pagination-style='text'></gls-pagination>
+        </dd>
+        <dd>
+            <gls-pagination pagination-style='arrow'></gls-pagination>
+        </dd>
+    </dl>
+    <dl class="progress-group">
+        <dd>
+            <gls-progress progress-percent=50></gls-progress>
+        </dd>
+        <dd>
+            <gls-progress progress-color='#67C33B' progress-percent=100></gls-progress>
+        </dd>
+    </dl>
+    <dl class="loading-group">
+        <dd>
+            <gls-loading></gls-loading>
+        </dd>
+    </dl>
+    <dl class="notification-group">
+        <dd>
+            <gls-button button-radius="13px" button-type="text" button-text="显示通知" onclick="handleNotifyShow()"></gls-button>
+            <gls-notification></gls-notification>
+        </dd>
+    </dl>
+    <dl class="menu-group">
+        <dd>
+            <gls-menu></gls-menu>
+        </dd>
+    </dl>
+    <dl class="dialog-group">
+        <dd>
+            <gls-button button-radius="13px" button-type="text" button-text="显示对话框" onclick="handleDialogShow()"></gls-button>
+            <gls-dialog></gls-dialog>
+        </dd>
+    </dl>
+    <dl class="backtop-group">
+        <dd>
+            <gls-backtop></gls-backtop>
+        </dd>
+    </dl>
+    <dl class="collapse-group">
+        <dd>
+            <gls-collapse></gls-collapse>
         </dd>
     </dl>
 </body>

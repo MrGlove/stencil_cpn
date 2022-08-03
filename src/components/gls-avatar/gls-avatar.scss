@@ -1,0 +1,31 @@
+:host {
+  display: block;
+  --avatar-size:40px;
+  --avatar-shape:50%;
+  $avatarsize : var(--avatar-size) !global;
+  $avatarshape : var(--avatar-shape) !global;
+}
+.avatar{
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: center;
+  overflow: hidden;
+  color: #fff;
+  background: #c0c4cc;
+  width: $avatarsize;
+  height: $avatarsize;
+  line-height: $avatarsize;
+  font-size: 14px;
+  border-radius: $avatarshape;
+  -webkit-border-radius: $avatarshape;
+  -moz-border-radius: $avatarshape;
+  -ms-border-radius: $avatarshape;
+  -o-border-radius: $avatarshape;
+}
+img{
+  width: $avatarsize;
+  height: $avatarsize;
+}
+b{
+  font-size: calc($avatarsize/1.5);
+}

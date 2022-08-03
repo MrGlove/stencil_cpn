@@ -1,6 +1,6 @@
 {
   "name": "gls-cpn",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Stencil Component Starter",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
@@ -26,14 +26,18 @@
     "generate": "stencil generate"
   },
   "dependencies": {
-    "@stencil/core": "^2.13.0",
+    "@stencil/core": "^2.17.2",
+    "classnames": "^2.3.1",
     "scss": "^0.2.4"
   },
   "devDependencies": {
+    "@stencil/sass": "^1.5.2",
     "@types/jest": "^27.0.3",
     "jest": "^27.4.5",
     "jest-cli": "^27.4.5",
-    "puppeteer": "^10.0.0"
+    "node-sass": "^7.0.1",
+    "puppeteer": "^10.0.0",
+    "sass-loader": "^13.0.2"
   },
   "license": "MIT"
 }

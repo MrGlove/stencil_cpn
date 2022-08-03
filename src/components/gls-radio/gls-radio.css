@@ -25,7 +25,7 @@ input[type="radio"]+label::before {
 
 /* 被选中的单选框样式  给空心圆圈中间加上背景色*/
 
-input[type="radio"]:checked+.radio-color-primary::before {
+input[type="radio"]:checked+.radio-color-blue::before {
     background-color: #178fe6;
     background-clip: content-box;
     /* 规定背景颜色的绘制区域 */
