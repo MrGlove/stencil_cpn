@@ -33,8 +33,15 @@ export namespace Components {
         "itemText": string;
     }
     interface GlsCollapse {
+        "changeMainInfo": (index: number) => Promise<void>;
+        "clpsTitle": string;
+        "currentState": number;
+        "deleteLine": () => Promise<void>;
+        "rl": Array<string>;
+        "stateList": string;
     }
     interface GlsDialog {
+        "ddata": object;
         "showDialog": () => Promise<void>;
     }
     interface GlsField {
@@ -95,6 +102,10 @@ export namespace Components {
         "tcolor": string;
         "ttext": string;
     }
+}
+export interface GlsDialogCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLGlsDialogElement;
 }
 declare global {
     interface HTMLGlsAvatarElement extends Components.GlsAvatar, HTMLStencilElement {
@@ -275,8 +286,14 @@ declare namespace LocalJSX {
         "itemText"?: string;
     }
     interface GlsCollapse {
+        "clpsTitle"?: string;
+        "currentState"?: number;
+        "rl"?: Array<string>;
+        "stateList"?: string;
     }
     interface GlsDialog {
+        "ddata"?: object;
+        "onNewMissionSubmitted"?: (event: GlsDialogCustomEvent<Object>) => void;
     }
     interface GlsField {
         "inputIcon"?: string;

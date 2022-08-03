@@ -5,6 +5,20 @@
 <!-- Auto Generated Below -->
 
 
+## Properties
+
+| Property | Attribute | Description | Type     | Default                    |
+| -------- | --------- | ----------- | -------- | -------------------------- |
+| `ddata`  | --        |             | `object` | `{     a: 1,     b: 2   }` |
+
+
+## Events
+
+| Event                 | Description | Type                  |
+| --------------------- | ----------- | --------------------- |
+| `newMissionSubmitted` |             | `CustomEvent<Object>` |
+
+
 ## Methods
 
 ### `showDialog() => Promise<void>`

@@ -16,7 +16,7 @@ export class GlsTag {
       <Host>
         <span
           class={classNames('gls-tag', `gls-tag-${this.tagStyle}`)}
-          innerHTML={this.tagContent + `<span class="tag-icon"><gls-icon icon-size='15px' icon-color='#444' icon-style='&#xe61b;'></gls-icon></span>`}
+          innerHTML={this.tagContent}
         ></span>
         <slot></slot>
       </Host>

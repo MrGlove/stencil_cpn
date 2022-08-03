@@ -1,8 +1,11 @@
 import { Component, Prop, h } from '@stencil/core';
 const buttonTypeMap = {
-  default: { textColor: '#222', bgColor: '#f91', borderColor: '#222' },
-  primary: { textColor: '#FFF', bgColor: '#5FCE79', borderColor: '#5FCE79' },
+  default: { textColor: '#fff', bgColor: '#a30030', borderColor: '#dad' },
+  success: { textColor: '#FFF', bgColor: '#5FCE79', borderColor: '#5FCE79' },
   text: { textColor: '#222', bgColor: '#FFF', borderColor: '#222' },
+  danger: { textColor: '#fff', bgColor: '#ee0a24', borderColor: '#ee0a24' },
+  primary: { textColor: '#fff', bgColor: '#1989fa', borderColor: '#1989fa' }
+
 }
 @Component({
   tag: 'gls-button',
