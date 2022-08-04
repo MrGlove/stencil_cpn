@@ -29,6 +29,10 @@ Type: `Promise<void>`
 
 用于删除该折叠面板的函数
 
+## Slots
+only one
+- 在展开面板中需要展示的内容
+
 ---
 
 _Built with [StencilJS](https://stenciljs.com/)_
