@@ -21,6 +21,16 @@
 
 ## Methods
 
+### `closeDialog() => Promise<void>`
+
+
+
+#### Returns
+
+Type: `Promise<void>`
+
+
+
 ### `showDialog() => Promise<void>`
 
 

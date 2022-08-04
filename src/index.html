@@ -304,7 +304,15 @@
     <dl class="dialog-group ">
         <dd>
             <gls-button button-radius="13px " button-type="text " button-text="显示对话框 " onclick="handleDialogShow() "></gls-button>
-            <gls-dialog></gls-dialog>
+            <gls-dialog>
+                <div slot="dialog-field ">
+                    <label for="inp1 ">AAAAA</label>
+                    <input type="text " placeholder="ssss " id="inp1 "><br/>
+                    <label for="inp1 ">AAAAA</label>
+                    <input type="text " placeholder="ssss " id="inp1 ">
+                </div>
+                <gls-button slot="dialog-submit " button-text='tijiao'></gls-button>
+            </gls-dialog>
         </dd>
     </dl>
     <dl class="backtop-group ">

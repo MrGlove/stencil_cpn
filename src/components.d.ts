@@ -41,6 +41,7 @@ export namespace Components {
         "stateList": string;
     }
     interface GlsDialog {
+        "closeDialog": () => Promise<void>;
         "ddata": object;
         "showDialog": () => Promise<void>;
     }

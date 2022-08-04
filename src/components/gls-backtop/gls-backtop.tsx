@@ -1,4 +1,4 @@
-import { Component,Element, Host, h } from '@stencil/core';
+import { Component, Element, Host, h } from '@stencil/core';
 
 @Component({
   tag: 'gls-backtop',
@@ -7,7 +7,7 @@ import { Component,Element, Host, h } from '@stencil/core';
 })
 export class GlsBacktop {
   @Element() el: HTMLElement
-  timer:any
+  timer: any
   toTop() {
     var step = document.documentElement.scrollTop
     this.timer = window.setInterval(() => {
@@ -15,14 +15,14 @@ export class GlsBacktop {
       if (step < 0) {
         window.clearInterval(this.timer)
       }
-      window.scrollTo(0,step)
-    },10)
+      window.scrollTo(0, step)
+    }, 10)
   }
 
   componentWillLoad() {
     window.onscroll = function () {
-      if (document.documentElement.scrollTop > 300) {
-        this.el.shadowRoot.querySelector('.gls-backtop').style='display:flex'
+      if (document.documentElement.scrollTop > 150) {
+        this.el.shadowRoot.querySelector('.gls-backtop').style = 'display:flex'
       } else {
         this.el.shadowRoot.querySelector('.gls-backtop').style = 'display:none';
       }
@@ -32,9 +32,9 @@ export class GlsBacktop {
   render() {
     return (
       <Host>
-        <div class="gls-backtop" style={{display:'none'}} onClick={this.toTop}>
+        <div class="gls-backtop" style={{ display: 'none' }} onClick={this.toTop}>
           <div class="backtop-inner">
-           上
+            上
           </div>
         </div>
         <slot></slot>

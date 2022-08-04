@@ -21,7 +21,7 @@ export class GlsDialog {
     this.newMissionSubmitted.emit(this.ddata)
   }
 
-  closeDialog() {
+  @Method() async closeDialog() {
     this.el.shadowRoot.querySelector('.dialog-wrapper').classList.add('dialog-hide')
   }
   render() {
@@ -30,14 +30,14 @@ export class GlsDialog {
         <div class="dialog-wrapper dialog-hide" style={{ zIndex: '2000' }}>
           <div class="dialog">
             <div class="dialog-header">
-              <span class="dialog-title">提示</span>
+              <span class="dialog-title">明确详情</span>
             </div>
             <div class="dialog-body">
-              <span>//这里放个表单</span>
+              <slot name='dialog-field '></slot>
             </div>
             <div class="dialog-footer">
-              <gls-button buttonText='tijiao' onClick={this.newMissionSubmittedHandler.bind(this)}></gls-button>
-              <slot><gls-button buttonType='primary' buttonText='确定' onClick={this.closeDialog.bind(this)}></gls-button></slot>
+              <slot name='dialog-submit '></slot>
+              <gls-button buttonType='primary' buttonText='确定' onClick={this.closeDialog.bind(this)}></gls-button>
             </div>
           </div>
         </div>

@@ -23,7 +23,6 @@ export class GlsCollapse {
   }
   connectedCallback() {
     this.rl = this.stateList.split(' ')
-    console.log(this.rl);
     this.clpsMainInfo = this.rl[this.currentState]
   }
   switchShowOrHide(e) {
