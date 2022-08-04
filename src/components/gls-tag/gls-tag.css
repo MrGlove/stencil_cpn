@@ -40,15 +40,17 @@
   border-color: #fde2e2;
   color: #f56c6c;
 }
-.tag-icon {
-  position: relative;
+.tag-cross {
+  margin-left: 5px;
   border-radius: 50%;
   text-align: center;
-  font-size: 12px;
+  position: relative;
+  cursor: pointer;
+  font-size: 16px;
   height: 16px;
   width: 16px;
   line-height: 16px;
   vertical-align: middle;
-  top: 0px;
-  right: -5px;
+  top: -3px;
+  right: -3px;
 }

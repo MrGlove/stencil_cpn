@@ -42,7 +42,7 @@ export namespace Components {
     }
     interface GlsDialog {
         "closeDialog": () => Promise<void>;
-        "ddata": object;
+        "deliverdata": object;
         "showDialog": () => Promise<void>;
     }
     interface GlsField {
@@ -92,6 +92,7 @@ export namespace Components {
     }
     interface GlsTag {
         "tagContent": string;
+        "tagCross": boolean;
         "tagStyle": string;
     }
     interface MyComponent {
@@ -293,8 +294,8 @@ declare namespace LocalJSX {
         "stateList"?: string;
     }
     interface GlsDialog {
-        "ddata"?: object;
-        "onNewMissionSubmitted"?: (event: GlsDialogCustomEvent<Object>) => void;
+        "deliverdata"?: object;
+        "onNewDataSubmitted"?: (event: GlsDialogCustomEvent<Object>) => void;
     }
     interface GlsField {
         "inputIcon"?: string;
@@ -342,6 +343,7 @@ declare namespace LocalJSX {
     }
     interface GlsTag {
         "tagContent"?: string;
+        "tagCross"?: boolean;
         "tagStyle"?: string;
     }
     interface MyComponent {

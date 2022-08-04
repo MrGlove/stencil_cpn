@@ -1,27 +1,24 @@
 # gls-button
 
-
-
 <!-- Auto Generated Below -->
-
 
 ## Properties
 
-| Property       | Attribute       | Description | Type     | Default     |
-| -------------- | --------------- | ----------- | -------- | ----------- |
-| `buttonRadius` | `button-radius` |             | `string` | `'3px'`     |
-| `buttonText`   | `button-text`   |             | `string` | `'默认文字'`    |
-| `buttonType`   | `button-type`   |             | `string` | `'default'` |
-
+| Property       | Attribute       | Description                                             | Type     | Default      |
+| -------------- | --------------- | ------------------------------------------------------- | -------- | ------------ |
+| `buttonRadius` | `button-radius` | 设置 button 边框圆角的大小                              | `string` | `'3px'`      |
+| `buttonText`   | `button-text`   | 内部文本                                                | `string` | `'默认文字'` |
+| `buttonType`   | `button-type`   | 按钮风格，支持 [default,primary,success,warning,danger] | `string` | `'default'`  |
 
 ## Dependencies
 
 ### Used by
 
- - [gls-badge](../gls-badge)
- - [gls-dialog](../gls-dialog)
+- [gls-badge](../gls-badge)
+- [gls-dialog](../gls-dialog)
 
 ### Graph
+
 ```mermaid
 graph TD;
   gls-badge --> gls-button
@@ -29,6 +26,6 @@ graph TD;
   style gls-button fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
-----------------------------------------------
+---
 
-*Built with [StencilJS](https://stenciljs.com/)*
+_Built with [StencilJS](https://stenciljs.com/)_

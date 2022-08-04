@@ -70,6 +70,9 @@ export class GlsPagination {
           <button type="button" class={classNames(`btn-prev`, `btn-prev-${typeMap[this.paginationStyle]['classname']}`)} disabled>
             <span>{typeMap[this.paginationStyle]['btncontent'][0]}</span>
           </button>
+          <span>
+            <div class={'pagespread'}>···</div>
+          </span>
           <ul class="pagenumbers">
             <li class={this.activeclassname} id="1">
               1
@@ -78,7 +81,11 @@ export class GlsPagination {
             <li id="3">3</li>
             <li id="4">4</li>
             <li id="5">5</li>
+            {/* <li id="6">6</li> */}
           </ul>
+          <span>
+            <div class={'pagespread'}>···</div>
+          </span>
           <button type="button" class={classNames(`btn-next`, `btn-next-${typeMap[this.paginationStyle]['classname']}`)}>
             <span>{typeMap[this.paginationStyle]['btncontent'][1]}</span>
           </button>

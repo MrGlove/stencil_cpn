@@ -9,14 +9,14 @@
 
 | Property | Attribute | Description | Type     | Default                    |
 | -------- | --------- | ----------- | -------- | -------------------------- |
-| `ddata`  | --        |             | `object` | `{     a: 1,     b: 2   }` |
+| `deliverdata`  | --        |      默认emit的数据      | `object` | `{     a: 1,     b: 2   }` |
 
 
 ## Events
 
 | Event                 | Description | Type                  |
 | --------------------- | ----------- | --------------------- |
-| `newMissionSubmitted` |             | `CustomEvent<Object>` |
+| `newDataSubmitted` |             | `CustomEvent<Object>` |
 
 
 ## Methods
@@ -29,7 +29,7 @@
 
 Type: `Promise<void>`
 
-
+确认/取消按钮关闭改对话框
 
 ### `showDialog() => Promise<void>`
 
@@ -39,7 +39,7 @@ Type: `Promise<void>`
 
 Type: `Promise<void>`
 
-
+触发对话框显示的函数
 
 
 ## Dependencies
