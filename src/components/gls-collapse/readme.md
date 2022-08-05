@@ -11,6 +11,9 @@
 | `rl`           | --              | 状态列表，暂时不能设置，通过 stateList 得到，待未来升级 | `string[]` | `undefined`  |
 | `stateList`    | `state-list`    | 面板右侧的状态列表字符串                                | `string`   | `''`         |
 
+
+完成页面 优化组件的表现效果
+整理材料准备
 ## Methods
 
 ### `changeMainInfo(index: number) => Promise<void>`
