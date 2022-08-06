@@ -12,8 +12,7 @@
 | `stateList`    | `state-list`    | 面板右侧的状态列表字符串                                | `string`   | `''`         |
 
 
-完成页面 优化组件的表现效果
-整理材料准备
+
 ## Methods
 
 ### `changeMainInfo(index: number) => Promise<void>`
