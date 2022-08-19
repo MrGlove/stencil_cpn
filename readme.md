@@ -1,7 +1,7 @@
 # stencil_cpn
 
 #### 介绍
-基于stencil编译器构建的简单web组件库
+基于stencil编译器构建的Web组件库
 
 #### 软件架构
 软件架构说明

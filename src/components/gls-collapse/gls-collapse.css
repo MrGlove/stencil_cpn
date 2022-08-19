@@ -36,6 +36,7 @@
     font-size: 16px;
     line-height: 24px;
     background-color: #fff;
+    box-shadow: 1px 1px 3px #222;
     transition: height 0.4s linear;
     -webkit-transition: height 0.4s linear;
     -moz-transition: height 0.4s linear;

@@ -36,24 +36,36 @@
         })
     </script>
     <style lang='scss'>
+        dl {
+            margin-block-start: 1.3em;
+            margin-block-end: 1.3em;
+        }
+        
         .button-list dd {
             display: inline-block;
             margin-inline-start: 20px;
+            margin-top: 20px;
         }
         
         .link-list dd {
             display: inline-block;
             margin-inline-start: 10px;
+            margin-top: 20px;
         }
         
         .radio-group dd {
             display: inline-block;
             margin-inline-start: 10px;
+            margin-top: 10px;
+        }
+        
+        .radio-group-hori {
+            margin-top: 15px;
         }
         
         .radio-group-hori dd {
             display: block;
-            margin-top: 1px;
+            margin-top: 2px;
         }
         
         .checkbox-group dd {
@@ -119,19 +131,19 @@
     <test-cpnfirst ttext="------------------" tcolor="#f91"></test-cpnfirst>
     <dl class="button-list">
         <dd>
-            <gls-button button-radius="13px" button-type="primary" button-text="AAAA"></gls-button>
+            <gls-button button-radius="13px" button-type="primary" button-text="PRIMARY"></gls-button>
         </dd>
         <dd>
-            <gls-button button-radius="13px" button-type="default" button-text="BBBB"></gls-button>
+            <gls-button button-radius="13px" button-type="default" button-text="CMB"></gls-button>
         </dd>
         <dd>
-            <gls-button button-radius="13px" button-type="text" button-text="CCCC"></gls-button>
+            <gls-button button-radius="13px" button-type="text" button-text="TEXT"></gls-button>
         </dd>
         <dd>
-            <gls-button button-radius="13px" button-type="success" button-text="CCCC"></gls-button>
+            <gls-button button-radius="13px" button-type="success" button-text="SUCCESS"></gls-button>
         </dd>
         <dd>
-            <gls-button button-radius="13px" button-type="danger" button-text="CCCC"></gls-button>
+            <gls-button button-radius="13px" button-type="danger" button-text="DANGER"></gls-button>
         </dd>
     </dl>
     <dl class="link-list">
@@ -306,12 +318,12 @@
             <gls-button button-radius="13px " button-type="text " button-text="显示对话框 " onclick="handleDialogShow() "></gls-button>
             <gls-dialog>
                 <div slot="dialog-field ">
-                    <label for="inp1 ">AAAAA</label>
-                    <input type="text " placeholder="ssss " id="inp1 "><br/>
-                    <label for="inp1 ">AAAAA</label>
-                    <input type="text " placeholder="ssss " id="inp1 ">
+                    <label for="inp1 ">TITLE1:</label><br>
+                    <input type="text " placeholder="请输入 " id="inp1 "><br/>
+                    <label for="inp1 ">TITLE2:</label><br>
+                    <input type="text " placeholder="请输入 " id="inp1 ">
                 </div>
-                <gls-button slot="dialog-submit " button-text='tijiao'></gls-button>
+                <gls-button slot="dialog-submit " button-text='提交'></gls-button>
             </gls-dialog>
         </dd>
     </dl>
