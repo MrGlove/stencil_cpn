@@ -27,6 +27,5 @@ import {defineCustomElement as defineButton} from "gls-cpn/dist/components/gls-b
 defineButton()
 ```
 
-
 ## 贡献
 - none

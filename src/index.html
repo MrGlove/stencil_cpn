@@ -98,6 +98,7 @@
         .tag-group dd {
             display: inline-block;
             margin-inline-start: 20px;
+            margin-top: 20px;
         }
         
         .badge-group dd {
@@ -269,13 +270,19 @@
     </dl>
     <dl class="tag-group ">
         <dd>
-            <gls-tag tag-style='success' tag-content='PASSED'></gls-tag>
+            <gls-tag tag-style='success' tag-content='PASSED' tag-cross=true></gls-tag>
         </dd>
         <dd>
-            <gls-tag tag-style='primary' tag-content='IN PROGRESS'></gls-tag>
+            <gls-tag tag-style='primary' tag-content='IN PROGRESS' tag-cross=false></gls-tag>
         </dd>
         <dd>
-            <gls-tag tag-style='info' tag-content='INFO'></gls-tag>
+            <gls-tag tag-style='info' tag-content='INFO' tag-cross=true></gls-tag>
+        </dd>
+        <dd>
+            <gls-tag tag-style='danger' tag-content='STOP!!!' tag-cross=false></gls-tag>
+        </dd>
+        <dd>
+            <gls-tag tag-style='warning' tag-content='WARNING!' tag-cross=true></gls-tag>
         </dd>
     </dl>
     <dl class="pagination-group ">

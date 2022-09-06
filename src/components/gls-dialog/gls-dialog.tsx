@@ -11,14 +11,14 @@ export class GlsDialog {
   @Method() async showDialog() {
     this.el.shadowRoot.querySelector('.dialog-wrapper').classList.remove('dialog-hide');
   }
-  @Event() newMissionSubmitted: EventEmitter<Object>
-  @Prop() ddata: object = {
+  @Event() newDataSubmitted: EventEmitter<Object>
+  @Prop() deliverdata: object = {
     a: 1,
     b: 2
   }
 
   newMissionSubmittedHandler() {
-    this.newMissionSubmitted.emit(this.ddata)
+    this.newDataSubmitted.emit(this.deliverdata)
   }
 
   @Method() async closeDialog() {
