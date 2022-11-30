@@ -4,7 +4,11 @@
        url('../assets/iconlib/iconfont.woff?t=1658720348394') format('woff'),
        url('../assets/iconlib/iconfont.ttf?t=1658720348394') format('truetype');
 }
+:root{
+  --color-first:cyan;
+}
 
+/* @import url(./global.css); */
 .iconfont {
   font-family: "iconfont" !important;
   font-size: 16px;

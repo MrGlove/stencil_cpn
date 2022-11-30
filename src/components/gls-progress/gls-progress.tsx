@@ -14,11 +14,10 @@ export class GlsProgress {
     newCSS.innerHTML = `
       .inner{
         width:${this.progressPercent}%;
-        background-color:${this.progressColor}
+        background-color:var(--color-first)
       }
     `
     this.el.shadowRoot.appendChild(newCSS)
-
     return (
         
       <Host>

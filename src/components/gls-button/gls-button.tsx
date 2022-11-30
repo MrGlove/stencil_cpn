@@ -1,6 +1,6 @@
 import { Component, Prop, h } from '@stencil/core';
 const buttonTypeMap = {
-  default: { textColor: '#fff', bgColor: '#a30030', borderColor: '#dad' },
+  default: { textColor: 'var(--color-first)', bgColor: '#a30030', borderColor: '#dad' },
   success: { textColor: '#FFF', bgColor: '#5FCE79', borderColor: '#5FCE79' },
   text: { textColor: '#222', bgColor: '#FFF', borderColor: '#222' },
   danger: { textColor: '#fff', bgColor: '#ee0a24', borderColor: '#ee0a24' },
