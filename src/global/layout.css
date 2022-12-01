@@ -1,0 +1,48 @@
+.gls-layout {
+  color: #fff;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  background: #f6f6f6;
+  flex: auto;
+}
+
+.gls-layout-row {
+  flex-direction: row;
+}
+
+.gls-layout-sider {
+  color: #fff;
+  line-height: 120px;
+  background: #3ba0e9;
+  position: relative;
+  padding-inline: 30px;
+
+  width: 200px;
+  flex: 0 0 200px;
+}
+
+.gls-layout-header {
+  height: 60px;
+  line-height: 60px;
+  padding-inline: 50px;
+  background-color: aquamarine;
+}
+
+.gls-layout-main {
+  flex: auto;
+  box-sizing: border-box;
+  min-height: 120px;
+  padding-inline: 50px;
+  color: #fff;
+  line-height: 120px;
+  background: rgba(16, 142, 233, 1);
+}
+
+.gls-layout-footer {
+  padding: 24px 50px;
+  line-height: 1.5;
+  color: #fff;
+  background: #7dbcea;
+}

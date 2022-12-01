@@ -1,11 +1,9 @@
 @font-face {
-  font-family: "iconfont"; /* Project id 3544515 */
+  font-family: "iconfont";
+  /* Project id 3544515 */
   src: url('../assets/iconlib/iconfont.woff2?t=1658720348394') format('woff2'),
-       url('../assets/iconlib/iconfont.woff?t=1658720348394') format('woff'),
-       url('../assets/iconlib/iconfont.ttf?t=1658720348394') format('truetype');
-}
-:root{
-  --color-first:cyan;
+    url('../assets/iconlib/iconfont.woff?t=1658720348394') format('woff'),
+    url('../assets/iconlib/iconfont.ttf?t=1658720348394') format('truetype');
 }
 
 /* @import url(./global.css); */
@@ -88,4 +86,3 @@
 .icon-More:before {
   content: "\e61d";
 }
-

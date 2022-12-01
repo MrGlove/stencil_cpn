@@ -2,7 +2,7 @@ import { Config } from '@stencil/core';
 import { sass } from '@stencil/sass';
 export const config: Config = {
   namespace: 'gls-cpn',
-  globalStyle:'src/assets/iconlib/iconfont.css',
+  globalStyle:'src/global/global.css',
   outputTargets: [
     {
       type: 'dist',

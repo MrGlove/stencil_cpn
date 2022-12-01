@@ -19,7 +19,7 @@ export class TestCpnfirst {
       --fs:30px;
     }
     #tid{
-      color:var(--color-first)
+      color:var(--color-primary)
     }
     `
     this.el.shadowRoot.appendChild(newstyle)
