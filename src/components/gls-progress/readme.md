@@ -13,6 +13,19 @@
 | `progressPercent` | `progress-percent` |             | `number` | `50`        |
 
 
+## Methods
+
+### `changeData(index: number) => Promise<void>`
+
+
+
+#### Returns
+
+Type: `Promise<void>`
+
+
+
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

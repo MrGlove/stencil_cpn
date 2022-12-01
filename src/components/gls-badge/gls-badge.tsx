@@ -1,4 +1,4 @@
-import { Component, Prop, Element, Host, h } from '@stencil/core';
+import { Component,Event,EventEmitter, Prop, Element, Host, h } from '@stencil/core';
 
 @Component({
   tag: 'gls-badge',
@@ -11,6 +11,8 @@ export class GlsBadge {
   @Prop() badgeContent: string = '323';
   @Prop() badgeStyle: string = '';
   @Element() el: HTMLElement;
+  @Event() badgehide:EventEmitter<Object>
+  
   render() {
     let realContent = '';
     let contentToNumber = Number(this.badgeContent);

@@ -14,6 +14,13 @@
 | `avatarType`  | `avatar-type`  |             | `string` | `'img'`   |
 
 
+## Events
+
+| Event      | Description | Type                  |
+| ---------- | ----------- | --------------------- |
+| `loadfail` |             | `CustomEvent<Object>` |
+
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

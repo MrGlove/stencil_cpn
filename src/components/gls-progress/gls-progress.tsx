@@ -1,4 +1,4 @@
-import { Component, Element, Prop, Host, h } from '@stencil/core';
+import { Component,Method,State, Element, Prop, Host, h } from '@stencil/core';
 
 @Component({
   tag: 'gls-progress',
@@ -7,14 +7,20 @@ import { Component, Element, Prop, Host, h } from '@stencil/core';
 })
 export class GlsProgress {
   @Prop() progressPercent: number = 50
-  @Prop() progressColor:string = '#409eff'
-  @Element() el:HTMLElement
+  @Prop() progressColor: string = '#409eff'
+  @State() nowpercent: number = this.progressPercent
+  @Element() el: HTMLElement
+  @Method()
+  async changeData(index: number) {
+    console.log('data updated');
+    this.nowpercent = index
+  }
   render() {
     let newCSS = document.createElement('style')
     newCSS.innerHTML = `
       .inner{
-        width:${this.progressPercent}%;
-        background-color:var(--color-first)
+        width:${this.nowpercent}%;
+        background-color:var(--color-primary)
       }
     `
     this.el.shadowRoot.appendChild(newCSS)

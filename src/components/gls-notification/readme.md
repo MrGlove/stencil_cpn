@@ -5,6 +5,13 @@
 <!-- Auto Generated Below -->
 
 
+## Events
+
+| Event        | Description | Type                  |
+| ------------ | ----------- | --------------------- |
+| `notiClosed` |             | `CustomEvent<object>` |
+
+
 ## Methods
 
 ### `showNotify() => Promise<void>`

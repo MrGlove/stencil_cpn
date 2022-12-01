@@ -15,6 +15,14 @@
 | `switchSize`     | `switch-size`     |             | `string`  | `'22px'` |
 
 
+## Events
+
+| Event           | Description | Type                  |
+| --------------- | ----------- | --------------------- |
+| `switchTofalse` |             | `CustomEvent<Object>` |
+| `switchTotrue`  |             | `CustomEvent<Object>` |
+
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

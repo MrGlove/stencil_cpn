@@ -28,8 +28,8 @@
         }
 
         function bll(i) {
+            console.log(this.parentNode.changeMainInfo);
             this.parentNode.changeMainInfo(i)
-
         }
         window.addEventListener('newMissionSubmitted', () => {
             console.log('listened!!!');
@@ -208,6 +208,21 @@
     
     <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
     <test-cpnfirst ttext="------------------" tcolor="#f91"></test-cpnfirst>
+    <dl class="title-list">
+        <dd>
+            <gls-title title-level="1" title-text="一级标题"></gls-title>
+            <gls-title title-level="2" title-text="二级标题"></gls-title>
+            <gls-title title-level="3" title-text="三级标题"></gls-title>
+            <gls-title title-level="4" title-text="四级标题"></gls-title>
+            <gls-title title-level="5" title-text="五级标题"></gls-title>
+            <gls-title title-level="6" title-text="六级标题"></gls-title>
+        </dd>
+    </dl>
+    <dl class="divider-list">
+        <dd>
+            <gls-divider divider-size="3px" divider-color="red" divider-length="80%"></gls-divider>
+        </dd>
+    </dl>
     <dl class="button-list">
         <dd>
             <gls-button button-radius="13px" button-type="primary" button-text="PRIMARY"></gls-button>
@@ -427,6 +442,10 @@
         </dd>
     </dl>
     <div class="gls-row">12345</div>
+    <script>
+        let a = document.getElementsByClassName('progress-group')[0].children[0].children[0];
+        
+    </script>
 </body>
 
 </html>

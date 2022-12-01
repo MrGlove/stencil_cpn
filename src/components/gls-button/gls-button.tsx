@@ -1,4 +1,4 @@
-import { Component, Prop, h } from '@stencil/core';
+import { Component,Event,EventEmitter, Prop, h } from '@stencil/core';
 const buttonTypeMap = {
   default: { textColor: 'var(--color-first)', bgColor: '#a30030', borderColor: '#dad' },
   success: { textColor: '#FFF', bgColor: '#5FCE79', borderColor: '#5FCE79' },
@@ -19,6 +19,8 @@ export class GlsButton {
   @Prop() buttonText: string = '默认文字';
   @Prop() buttonType: string = 'default';
   @Prop() buttonRadius: string = '3px';
+
+  @Event() buttonClicked: EventEmitter<Object>
 
   render() {
     const buttonTypeCSS = this.buttonType &&

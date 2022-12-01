@@ -17,6 +17,14 @@
 | `itemText`      | `item-text`      |             | `string`  | `'content'`                 |
 
 
+## Events
+
+| Event      | Description | Type                  |
+| ---------- | ----------- | --------------------- |
+| `canceled` |             | `CustomEvent<Object>` |
+| `selected` |             | `CustomEvent<Object>` |
+
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

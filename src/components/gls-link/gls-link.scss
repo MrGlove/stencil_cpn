@@ -6,6 +6,9 @@
     font-size: 14px;
     display: inline-block;
 }
+.gls-link:visited{
+    //color: gray;
+}
 
 .gls-link-default {
     color: var(--color-first);
@@ -26,4 +29,12 @@
 
 .gls-link-danger {
     color: #f78989;
+}
+
+.gls-link-u{
+    text-decoration: underline;
+}
+
+.gls-link-n{
+    text-decoration: none;
 }

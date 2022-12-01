@@ -1,4 +1,4 @@
-import { Component,Prop,Element, Host, h } from '@stencil/core';
+import { Component,Event,EventEmitter, Prop,Element, Host, h } from '@stencil/core';
 
 @Component({
   tag: 'gls-switch',
@@ -11,7 +11,8 @@ export class GlsSwitch {
   @Prop() switchDisabled: boolean = false
   @Prop() switchChecked:boolean=false
   @Element() el: HTMLElement
-  
+  @Event() switchTotrue:EventEmitter<Object>
+  @Event() switchTofalse:EventEmitter<Object>
 
   render() {
     let newSwitchCSS = document.createElement('style')

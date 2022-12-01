@@ -15,6 +15,13 @@
 | `badgeStyle`    | `badge-style`     |             | `string` | `''`     |
 
 
+## Events
+
+| Event       | Description | Type                  |
+| ----------- | ----------- | --------------------- |
+| `badgehide` |             | `CustomEvent<Object>` |
+
+
 ## Dependencies
 
 ### Depends on

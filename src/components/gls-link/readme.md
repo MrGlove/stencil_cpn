@@ -7,10 +7,11 @@
 
 ## Properties
 
-| Property   | Attribute   | Description | Type     | Default     |
-| ---------- | ----------- | ----------- | -------- | ----------- |
-| `linkText` | `link-text` |             | `string` | `'默认链接'`    |
-| `linkType` | `link-type` |             | `string` | `'default'` |
+| Property        | Attribute        | Description | Type      | Default     |
+| --------------- | ---------------- | ----------- | --------- | ----------- |
+| `linkText`      | `link-text`      |             | `string`  | `'默认链接'`    |
+| `linkType`      | `link-type`      |             | `string`  | `'default'` |
+| `linkUnderline` | `link-underline` |             | `boolean` | `true`      |
 
 
 ----------------------------------------------

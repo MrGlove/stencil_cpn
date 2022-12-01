@@ -1,4 +1,4 @@
-import { Component,Element, Host, h } from '@stencil/core';
+import { Component,Method,Element, Host, h } from '@stencil/core';
 
 @Component({
   tag: 'gls-menu',
@@ -12,6 +12,16 @@ export class GlsMenu {
     e.target.classList.add('active')
     console.log('menu switched to '+e.target.innerText);
     
+  }
+  @Method()
+  async showmenu(index: number) {
+    console.log('menu list');
+    console.log(index);
+  }
+  @Method()
+  async closemenu(index: number) {
+    console.log('menu hide');
+    console.log(index);
   }
   render() {
     return (

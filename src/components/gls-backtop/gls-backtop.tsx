@@ -1,4 +1,4 @@
-import { Component, Element, Host, h } from '@stencil/core';
+import { Component,Event,EventEmitter, Element, Host, h } from '@stencil/core';
 
 @Component({
   tag: 'gls-backtop',
@@ -7,6 +7,7 @@ import { Component, Element, Host, h } from '@stencil/core';
 })
 export class GlsBacktop {
   @Element() el: HTMLElement
+  @Event() gototop:EventEmitter<object>
   timer: any
   toTop() {
     var step = document.documentElement.scrollTop

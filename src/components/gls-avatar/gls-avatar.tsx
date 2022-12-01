@@ -1,4 +1,4 @@
-import { Component,Element, Prop, Host, h } from '@stencil/core';
+import { Component,Event,EventEmitter, Element, Prop, Host, h } from '@stencil/core';
 const shapeMap = {
   'round': '50%',
   'square': '10%'
@@ -17,7 +17,9 @@ export class GlsAvatar {
   @Prop() avatarSize:string='50px'
   @Prop() avatarShape:string='round'
   @Prop() avatarType:string='img'
-  @Element()el:HTMLElement
+  @Element() el: HTMLElement
+  @Event() loadfail:EventEmitter<Object>
+  
   render() {
     let newCSS = document.createElement('style')
     newCSS.innerHTML = `

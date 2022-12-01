@@ -45,6 +45,11 @@ export namespace Components {
         "deliverdata": object;
         "showDialog": () => Promise<void>;
     }
+    interface GlsDivider {
+        "dividerColor": string;
+        "dividerLength": string;
+        "dividerSize": string;
+    }
     interface GlsField {
         "inputIcon": string;
         "inputText": string;
@@ -59,10 +64,14 @@ export namespace Components {
     interface GlsLink {
         "linkText": string;
         "linkType": string;
+        "linkUnderline": boolean;
     }
     interface GlsLoading {
+        "loadDone": (index: number) => Promise<void>;
     }
     interface GlsMenu {
+        "closemenu": (index: number) => Promise<void>;
+        "showmenu": (index: number) => Promise<void>;
     }
     interface GlsNotification {
         "showNotify": () => Promise<void>;
@@ -71,6 +80,7 @@ export namespace Components {
         "paginationStyle": string;
     }
     interface GlsProgress {
+        "changeData": (index: number) => Promise<void>;
         "progressColor": string;
         "progressPercent": number;
     }
@@ -95,6 +105,10 @@ export namespace Components {
         "tagCross": boolean;
         "tagStyle": string;
     }
+    interface GlsTitle {
+        "titleLevel": string;
+        "titleText": string;
+    }
     interface MyComponent {
         "first": string;
         "last": string;
@@ -105,9 +119,45 @@ export namespace Components {
         "ttext": string;
     }
 }
+export interface GlsAvatarCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLGlsAvatarElement;
+}
+export interface GlsBacktopCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLGlsBacktopElement;
+}
+export interface GlsBadgeCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLGlsBadgeElement;
+}
+export interface GlsButtonCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLGlsButtonElement;
+}
+export interface GlsCheckboxCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLGlsCheckboxElement;
+}
 export interface GlsDialogCustomEvent<T> extends CustomEvent<T> {
     detail: T;
     target: HTMLGlsDialogElement;
+}
+export interface GlsNotificationCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLGlsNotificationElement;
+}
+export interface GlsRadioCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLGlsRadioElement;
+}
+export interface GlsSwitchCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLGlsSwitchElement;
+}
+export interface GlsTagCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLGlsTagElement;
 }
 declare global {
     interface HTMLGlsAvatarElement extends Components.GlsAvatar, HTMLStencilElement {
@@ -151,6 +201,12 @@ declare global {
     var HTMLGlsDialogElement: {
         prototype: HTMLGlsDialogElement;
         new (): HTMLGlsDialogElement;
+    };
+    interface HTMLGlsDividerElement extends Components.GlsDivider, HTMLStencilElement {
+    }
+    var HTMLGlsDividerElement: {
+        prototype: HTMLGlsDividerElement;
+        new (): HTMLGlsDividerElement;
     };
     interface HTMLGlsFieldElement extends Components.GlsField, HTMLStencilElement {
     }
@@ -224,6 +280,12 @@ declare global {
         prototype: HTMLGlsTagElement;
         new (): HTMLGlsTagElement;
     };
+    interface HTMLGlsTitleElement extends Components.GlsTitle, HTMLStencilElement {
+    }
+    var HTMLGlsTitleElement: {
+        prototype: HTMLGlsTitleElement;
+        new (): HTMLGlsTitleElement;
+    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
@@ -244,6 +306,7 @@ declare global {
         "gls-checkbox": HTMLGlsCheckboxElement;
         "gls-collapse": HTMLGlsCollapseElement;
         "gls-dialog": HTMLGlsDialogElement;
+        "gls-divider": HTMLGlsDividerElement;
         "gls-field": HTMLGlsFieldElement;
         "gls-icon": HTMLGlsIconElement;
         "gls-link": HTMLGlsLinkElement;
@@ -256,6 +319,7 @@ declare global {
         "gls-select": HTMLGlsSelectElement;
         "gls-switch": HTMLGlsSwitchElement;
         "gls-tag": HTMLGlsTagElement;
+        "gls-title": HTMLGlsTitleElement;
         "my-component": HTMLMyComponentElement;
         "test-cpnfirst": HTMLTestCpnfirstElement;
     }
@@ -265,19 +329,23 @@ declare namespace LocalJSX {
         "avatarShape"?: string;
         "avatarSize"?: string;
         "avatarType"?: string;
+        "onLoadfail"?: (event: GlsAvatarCustomEvent<Object>) => void;
     }
     interface GlsBacktop {
+        "onGototop"?: (event: GlsBacktopCustomEvent<object>) => void;
     }
     interface GlsBadge {
         "badgeColor"?: string;
         "badgeContent"?: string;
         "badgeHostText"?: string;
         "badgeStyle"?: string;
+        "onBadgehide"?: (event: GlsBadgeCustomEvent<Object>) => void;
     }
     interface GlsButton {
         "buttonRadius"?: string;
         "buttonText"?: string;
         "buttonType"?: string;
+        "onButtonClicked"?: (event: GlsButtonCustomEvent<Object>) => void;
     }
     interface GlsCheckbox {
         "checkboxColor"?: string;
@@ -286,6 +354,8 @@ declare namespace LocalJSX {
         "itemChecked"?: boolean;
         "itemId"?: string;
         "itemText"?: string;
+        "onCanceled"?: (event: GlsCheckboxCustomEvent<Object>) => void;
+        "onSelected"?: (event: GlsCheckboxCustomEvent<Object>) => void;
     }
     interface GlsCollapse {
         "clpsTitle"?: string;
@@ -296,6 +366,11 @@ declare namespace LocalJSX {
     interface GlsDialog {
         "deliverdata"?: object;
         "onNewDataSubmitted"?: (event: GlsDialogCustomEvent<Object>) => void;
+    }
+    interface GlsDivider {
+        "dividerColor"?: string;
+        "dividerLength"?: string;
+        "dividerSize"?: string;
     }
     interface GlsField {
         "inputIcon"?: string;
@@ -311,12 +386,14 @@ declare namespace LocalJSX {
     interface GlsLink {
         "linkText"?: string;
         "linkType"?: string;
+        "linkUnderline"?: boolean;
     }
     interface GlsLoading {
     }
     interface GlsMenu {
     }
     interface GlsNotification {
+        "onNotiClosed"?: (event: GlsNotificationCustomEvent<object>) => void;
     }
     interface GlsPagination {
         "paginationStyle"?: string;
@@ -329,6 +406,8 @@ declare namespace LocalJSX {
         "itemChecked"?: boolean;
         "itemId"?: string;
         "itemText"?: string;
+        "onCanceled"?: (event: GlsRadioCustomEvent<Object>) => void;
+        "onSelected"?: (event: GlsRadioCustomEvent<Object>) => void;
         "radioColor"?: string;
         "radioName"?: string;
         "radioStyle"?: string;
@@ -336,15 +415,23 @@ declare namespace LocalJSX {
     interface GlsSelect {
     }
     interface GlsSwitch {
+        "onSwitchTofalse"?: (event: GlsSwitchCustomEvent<Object>) => void;
+        "onSwitchTotrue"?: (event: GlsSwitchCustomEvent<Object>) => void;
         "switchChecked"?: boolean;
         "switchColor"?: string;
         "switchDisabled"?: boolean;
         "switchSize"?: string;
     }
     interface GlsTag {
+        "onTagclicked"?: (event: GlsTagCustomEvent<Object>) => void;
+        "onTagclosed"?: (event: GlsTagCustomEvent<Object>) => void;
         "tagContent"?: string;
         "tagCross"?: boolean;
         "tagStyle"?: string;
+    }
+    interface GlsTitle {
+        "titleLevel"?: string;
+        "titleText"?: string;
     }
     interface MyComponent {
         "first"?: string;
@@ -363,6 +450,7 @@ declare namespace LocalJSX {
         "gls-checkbox": GlsCheckbox;
         "gls-collapse": GlsCollapse;
         "gls-dialog": GlsDialog;
+        "gls-divider": GlsDivider;
         "gls-field": GlsField;
         "gls-icon": GlsIcon;
         "gls-link": GlsLink;
@@ -375,6 +463,7 @@ declare namespace LocalJSX {
         "gls-select": GlsSelect;
         "gls-switch": GlsSwitch;
         "gls-tag": GlsTag;
+        "gls-title": GlsTitle;
         "my-component": MyComponent;
         "test-cpnfirst": TestCpnfirst;
     }
@@ -390,6 +479,7 @@ declare module "@stencil/core" {
             "gls-checkbox": LocalJSX.GlsCheckbox & JSXBase.HTMLAttributes<HTMLGlsCheckboxElement>;
             "gls-collapse": LocalJSX.GlsCollapse & JSXBase.HTMLAttributes<HTMLGlsCollapseElement>;
             "gls-dialog": LocalJSX.GlsDialog & JSXBase.HTMLAttributes<HTMLGlsDialogElement>;
+            "gls-divider": LocalJSX.GlsDivider & JSXBase.HTMLAttributes<HTMLGlsDividerElement>;
             "gls-field": LocalJSX.GlsField & JSXBase.HTMLAttributes<HTMLGlsFieldElement>;
             "gls-icon": LocalJSX.GlsIcon & JSXBase.HTMLAttributes<HTMLGlsIconElement>;
             "gls-link": LocalJSX.GlsLink & JSXBase.HTMLAttributes<HTMLGlsLinkElement>;
@@ -402,6 +492,7 @@ declare module "@stencil/core" {
             "gls-select": LocalJSX.GlsSelect & JSXBase.HTMLAttributes<HTMLGlsSelectElement>;
             "gls-switch": LocalJSX.GlsSwitch & JSXBase.HTMLAttributes<HTMLGlsSwitchElement>;
             "gls-tag": LocalJSX.GlsTag & JSXBase.HTMLAttributes<HTMLGlsTagElement>;
+            "gls-title": LocalJSX.GlsTitle & JSXBase.HTMLAttributes<HTMLGlsTitleElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "test-cpnfirst": LocalJSX.TestCpnfirst & JSXBase.HTMLAttributes<HTMLTestCpnfirstElement>;
         }

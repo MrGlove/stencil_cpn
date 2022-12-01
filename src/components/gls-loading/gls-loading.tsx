@@ -1,4 +1,4 @@
-import { Component, Host, h } from '@stencil/core';
+import { Component,Method, Host, h } from '@stencil/core';
 
 @Component({
   tag: 'gls-loading',
@@ -6,7 +6,11 @@ import { Component, Host, h } from '@stencil/core';
   shadow: true,
 })
 export class GlsLoading {
-
+  @Method()
+  async loadDone(index: number) {
+    console.log('load done');
+    console.log(index);
+  }
   render() {
     return (
       <Host>

@@ -17,6 +17,14 @@
 | `radioStyle`  | `radio-style`  |             | `string`  | `'round'`                   |
 
 
+## Events
+
+| Event      | Description | Type                  |
+| ---------- | ----------- | --------------------- |
+| `canceled` |             | `CustomEvent<Object>` |
+| `selected` |             | `CustomEvent<Object>` |
+
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

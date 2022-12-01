@@ -1,4 +1,4 @@
-import { Component, Prop, Element, Host, h } from '@stencil/core';
+import { Component,Event,EventEmitter, Prop, Element, Host, h } from '@stencil/core';
 import classNames from 'classnames';
 
 @Component({
@@ -12,6 +12,11 @@ export class GlsTag {
   @Prop() tagCross: boolean = true;
 
   @Element() el: HTMLElement;
+
+  @Event() tagclosed: EventEmitter<Object>
+  @Event() tagclicked:EventEmitter<Object>
+  
+
   removeTag() {
     this.el.remove()
   }
