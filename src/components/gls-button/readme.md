@@ -8,6 +8,7 @@
 | Property       | Attribute       | Description | Type     | Default     |
 | -------------- | --------------- | ----------- | -------- | ----------- |
 | `buttonRadius` | `button-radius` |             | `string` | `'3px'`     |
+| `buttonSize`   | `button-size`   |             | `string` | `'medium'`  |
 | `buttonText`   | `button-text`   |             | `string` | `'默认文字'`    |
 | `buttonType`   | `button-type`   |             | `string` | `'default'` |
 
@@ -17,6 +18,19 @@
 | Event           | Description | Type                  |
 | --------------- | ----------- | --------------------- |
 | `buttonClicked` |             | `CustomEvent<Object>` |
+
+
+## Methods
+
+### `changeState(index: number) => Promise<void>`
+
+
+
+#### Returns
+
+Type: `Promise<void>`
+
+
 
 
 ## Dependencies

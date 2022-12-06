@@ -1,4 +1,4 @@
-import { Component,Event,EventEmitter, Prop, Element, Host, h } from '@stencil/core';
+import { Component, Event, EventEmitter, State, Prop, Element, Host, h, Method } from '@stencil/core';
 
 @Component({
   tag: 'gls-badge',
@@ -9,23 +9,29 @@ export class GlsBadge {
   @Prop() badgeHostText: string = '按钮';
   @Prop() badgeColor: string = '#f91';
   @Prop() badgeContent: string = '323';
-  @Prop() badgeStyle: string = '';
+  @Prop() badgeMax: number = 99;
   @Element() el: HTMLElement;
-  @Event() badgehide:EventEmitter<Object>
-  
+  @Event() badgehide: EventEmitter<Object>
+  @State() badgeNum: number = 0;
+  @Method()
+  async changeNum(index: number) {
+    console.log(index);
+
+  }
   render() {
     let realContent = '';
     let contentToNumber = Number(this.badgeContent);
     if (isNaN(contentToNumber)) {
       realContent = this.badgeContent;
     } else {
-      if (contentToNumber > 99) {
+      this.badgeNum = contentToNumber
+      if (contentToNumber > this.badgeMax) {
         realContent = '99+';
       } else {
         realContent = `${contentToNumber}`;
       }
     }
-    
+
     let newCSS = document.createElement('style');
     newCSS.innerHTML = `
       .gls-badge {

@@ -1,4 +1,4 @@
-import { Component,Event,EventEmitter, Method,Element, Host, h } from '@stencil/core';
+import { Component, Event, EventEmitter, Method, Element, Host, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'gls-notification',
@@ -6,13 +6,15 @@ import { Component,Event,EventEmitter, Method,Element, Host, h } from '@stencil/
   shadow: true,
 })
 export class GlsNotification {
-  @Element() el:HTMLElement
+  @Prop() notificationText: string = '默认通知内容'
+  @Prop() notificationPosition: string = 'right-top'
+  @Element() el: HTMLElement
   @Method() async showNotify() {
     this.el.shadowRoot.querySelector('.notify').classList.remove('notify-anim');
     this.el.shadowRoot.querySelector('.notify').getAnimations(); //???????????随便跑一个函数??????????????
     this.el.shadowRoot.querySelector('.notify').classList.add('notify-anim');
   }
-  @Event() notiClosed:EventEmitter<object>
+  @Event() notiClosed: EventEmitter<object>
   render() {
     return (
       <Host>

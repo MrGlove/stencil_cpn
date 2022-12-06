@@ -22,7 +22,7 @@ export class GlsLink {
       linkTypeMap[this.linkType] ?
       linkTypeMap[this.linkType] :
       linkTypeMap['dafault']
-    const linkUnderlineType = this.linkUnderline?'u':'n'
+    const linkUnderlineType = this.linkUnderline ? 'u' : 'n'
     return (
       <a href="#" class={`gls-link gls-link-${linkTypeCSS} gls-link-${linkUnderlineType}`} >{this.linkText}</a>
     );

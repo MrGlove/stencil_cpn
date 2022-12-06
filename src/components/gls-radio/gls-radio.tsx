@@ -1,4 +1,4 @@
-import { Component,Event,EventEmitter, Prop, h } from '@stencil/core';
+import { Component, Event, EventEmitter, Prop, h, State, Method } from '@stencil/core';
 function offerId() {
   let index = 0
   return function () {
@@ -17,8 +17,15 @@ export class GlsRadio {
   @Prop() itemText: string = 'content'
   @Prop() itemId: string = 'defaultID' + offerId()()
   @Prop() itemChecked: boolean = false
-  @Event() selected:EventEmitter<Object>
-  @Event() canceled:EventEmitter<Object>
+  @Event() selected: EventEmitter<Object>
+  @Event() canceled: EventEmitter<Object>
+  @State() idChecked: boolean = this.itemChecked
+  @Method()
+  async changeChecked(index: number) {
+    console.log(index);
+    this.idChecked = index == 1 ? true : false
+  }
+
   render() {
     return (<div>
       <input type="radio" name={this.radioName} id={this.itemId} checked={this.itemChecked} hidden />

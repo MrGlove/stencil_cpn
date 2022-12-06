@@ -17,12 +17,15 @@ export namespace Components {
         "badgeColor": string;
         "badgeContent": string;
         "badgeHostText": string;
-        "badgeStyle": string;
+        "badgeMax": number;
+        "changeNum": (index: number) => Promise<void>;
     }
     interface GlsButton {
         "buttonRadius": string;
+        "buttonSize": string;
         "buttonText": string;
         "buttonType": string;
+        "changeState": (index: number) => Promise<void>;
     }
     interface GlsCheckbox {
         "checkboxColor": string;
@@ -74,6 +77,8 @@ export namespace Components {
         "showmenu": (index: number) => Promise<void>;
     }
     interface GlsNotification {
+        "notificationPosition": string;
+        "notificationText": string;
         "showNotify": () => Promise<void>;
     }
     interface GlsPagination {
@@ -85,6 +90,7 @@ export namespace Components {
         "progressPercent": number;
     }
     interface GlsRadio {
+        "changeChecked": (index: number) => Promise<void>;
         "itemChecked": boolean;
         "itemId": string;
         "itemText": string;
@@ -99,6 +105,7 @@ export namespace Components {
         "switchColor": string;
         "switchDisabled": boolean;
         "switchSize": string;
+        "switchText": string;
     }
     interface GlsTag {
         "tagContent": string;
@@ -338,11 +345,12 @@ declare namespace LocalJSX {
         "badgeColor"?: string;
         "badgeContent"?: string;
         "badgeHostText"?: string;
-        "badgeStyle"?: string;
+        "badgeMax"?: number;
         "onBadgehide"?: (event: GlsBadgeCustomEvent<Object>) => void;
     }
     interface GlsButton {
         "buttonRadius"?: string;
+        "buttonSize"?: string;
         "buttonText"?: string;
         "buttonType"?: string;
         "onButtonClicked"?: (event: GlsButtonCustomEvent<Object>) => void;
@@ -393,6 +401,8 @@ declare namespace LocalJSX {
     interface GlsMenu {
     }
     interface GlsNotification {
+        "notificationPosition"?: string;
+        "notificationText"?: string;
         "onNotiClosed"?: (event: GlsNotificationCustomEvent<object>) => void;
     }
     interface GlsPagination {
@@ -421,6 +431,7 @@ declare namespace LocalJSX {
         "switchColor"?: string;
         "switchDisabled"?: boolean;
         "switchSize"?: string;
+        "switchText"?: string;
     }
     interface GlsTag {
         "onTagclicked"?: (event: GlsTagCustomEvent<Object>) => void;
